@@ -12,7 +12,6 @@
    	    public function visualizar($id){
             $parametros['titulo'] = 'Questao';
             $parametros['Questao'] =  $this->Questao->get($id);
-            $this->load->view('Questao/cabecalhopost',$parametros);
             $this->load->view('Questao/visualizar',$parametros);
             $this->load->view('rodape');
         }
