@@ -5,7 +5,7 @@
             $parametros['titulo'] = 'Questões';
             $parametros['questoes'] =  $this->Questao->get();
             $this->load->view('cabecalho',$parametros);
-            $this->load->view('Questao/index',$parametros);
+            $this->load->view('questao/index',$parametros);
             $this->load->view('rodape');
         }
 
