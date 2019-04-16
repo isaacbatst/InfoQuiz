@@ -1,4 +1,11 @@
-<?=anchor('questao-novo','Nova Questão')?>
+
+<table>
+    <tr>
+        <td><?=anchor('index-index','Página Inicial')?></td>
+        <td><?=anchor('questao-novo','Nova Questão')?></td>
+    </tr>
+</table>
+
 
 <?php if ($questoes == FALSE): ?>
     <h3>Nenhuma questao encontrada</h3>
@@ -36,3 +43,4 @@
         </tbody>
     </table>    
 <?php endif; ?>
+

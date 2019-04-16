@@ -28,7 +28,9 @@
             <td>Disciplina</td>
             <td><input type="text" name="disciplina"/></td>
         </tr>
+        <tr>
+            <td><input type="submit" value="Salvar"/></td>
+        </tr>
     </table>
-    <input type="submit" value="Salvar"/>
 <?=form_close()?>
 <?=anchor('questao','Voltar')?>

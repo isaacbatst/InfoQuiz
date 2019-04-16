@@ -28,7 +28,7 @@
         public function salvar(){
             $questao = $this->input->post();
             $this->Questao->inserir($questao);
-            redirect();
+            redirect('questao-index');
         }
         public function editar($id){
             $parametros['titulo'] = 'Edição de Questao';
@@ -41,11 +41,12 @@
         public function atualizar(){
           $questao = $this->input->post();
           $this->Questao->atualizar($questao);
-          redirect();
+          redirect('questao-index');
+
         }
 
         public function excluir($id){
           $this->Questao->excluir($id);
-          redirect();
+          redirect('questao-index');
         }
   	}

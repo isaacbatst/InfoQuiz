@@ -49,14 +49,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'QuestaoController';
+$route['default_controller'] = 'IndexController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//Rotas das Questões
 $route['questao'] = "QuestaoController";
-//$route['questao-visualizar/(:num)'] = "QuestaoController/visualizar/$1";
+$route['questao-index'] = "QuestaoController/index";
 $route['questao-novo'] = "QuestaoController/novo";
 $route['questao-salvar'] = "QuestaoController/salvar";
 $route['questao-editar/(:num)'] = "QuestaoController/editar/$1";
 $route['questao-atualizar'] = "QuestaoController/atualizar";
 $route['questao-excluir/(:num)'] = "QuestaoController/excluir/$1";
+
+//Rotas dos Usuários
+$route['usuario'] = "UsuarioController";
+$route['usuario-index'] = "UsuarioController/index";
+$route['usuario-novo'] = "UsuarioController/novo";
+$route['usuario-salvar'] = "UsuarioController/salvar";
+$route['usuario-editar/(:num)'] = "UsuarioController/editar/$1";
+$route['usuario-atualizar'] = "UsuarioController/atualizar";
+$route['usuario-excluir/(:num)'] = "UsuarioController/excluir/$1";
+
+//Rota index principal
+$route['index'] = "IndexController";
+$route['index-index'] = "IndexController/index";
+

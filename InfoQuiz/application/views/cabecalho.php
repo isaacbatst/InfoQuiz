@@ -3,7 +3,7 @@
         <meta charset="utf-8" />
         <title>Quiz</title>
         <style type="text/css">
-            td,th{border: 1px solid black;}
+            td{text-align: center;padding: 15px;}
         </style>
     </head>
     <body>
