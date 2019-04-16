@@ -8,37 +8,39 @@
             $this->load->view('questao/index',$parametros);
             $this->load->view('rodape');
         }
-
+        
+        /*
    	    public function visualizar($id){
             $parametros['titulo'] = 'Questao';
-            $parametros['Questao'] =  $this->Questao->get($id);
-            $this->load->view('Questao/visualizar',$parametros);
+            $parametros['questao'] =  $this->Questao->get($id);
+            $this->load->view('questao/visualizar',$parametros);
             $this->load->view('rodape');
         }
+        */
 
         public function novo(){
-            $parametros['titulo'] = 'Nova Questao';
+            $parametros['titulo'] = 'Nova Questão';
             $this->load->view('cabecalho',$parametros);
-            $this->load->view('Questao/novo');
+            $this->load->view('questao/novo');
             $this->load->view('rodape');
         }
 
         public function salvar(){
-            $Questao = $this->input->post();
-            $this->Questao->inserir($Questao);
+            $questao = $this->input->post();
+            $this->Questao->inserir($questao);
             redirect();
         }
         public function editar($id){
             $parametros['titulo'] = 'Edição de Questao';
-            $parametros['Questao'] = $this->Questao->get($id);
+            $parametros['questao'] = $this->Questao->get($id);
             $this->load->view('cabecalho',$parametros);
-            $this->load->view('Questao/editar',$parametros);
+            $this->load->view('questao/editar',$parametros);
             $this->load->view('rodape');
         }
 
         public function atualizar(){
-          $Questao = $this->input->post();
-          $this->Questao->atualizar($Questao);
+          $questao = $this->input->post();
+          $this->Questao->atualizar($questao);
           redirect();
         }
 

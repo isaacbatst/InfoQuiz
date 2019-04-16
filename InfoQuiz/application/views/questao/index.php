@@ -1,4 +1,4 @@
-<?=anchor('questao-novo','Nova Postagem')?>
+<?=anchor('questao-novo','Nova Questão')?>
 
 <?php if ($questoes == FALSE): ?>
     <h3>Nenhuma questao encontrada</h3>
@@ -6,17 +6,31 @@
     <table >
         <thead>
             <tr>
-                <th>Título</th>
-                <th></th>
-                <th></th>
+                <th>ID </th>
+                <th>Questão </th>
+                <th>Alternativa A</th>
+                <th>Alternativa B</th>
+                <th>Alternativa C</th>
+                <th>Alternativa D</th>
+                <th>Alternativa Correta</th>
+                <th>Disciplina</th>
+                <th>Editar</th>
+                <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($questoes as $questao): ?>
                 <tr >
-                    <td style="border:1px solid black"><?=anchor('questao-visualizar/'.$questao['id'], $questao['pergunta'])?></td>
-                    <td style="border:1px solid black"><?=anchor('questao-editar/'.$questao['id'],'Editar')?>
-                    <td style="border:1px solid black"><?=anchor('questao-excluir/'.$questao['id'],'Excluir')?></td>
+                    <td><?=$questao['id']?></td>
+                    <td><?=$questao['pergunta']?></td>
+                    <td><?=$questao['alternativa_a']?></td>
+                    <td><?=$questao['alternativa_b']?></td>
+                    <td><?=$questao['alternativa_c']?></td>
+                    <td><?=$questao['alternativa_d']?></td>
+                    <td><?=$questao['alternativa_correta']?></td>
+                    <td><?=$questao['disciplina']?></td>
+                    <td><?=anchor('questao-editar/'.$questao['id'],'Editar')?>
+                    <td><?=anchor('questao-excluir/'.$questao['id'],'Excluir')?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

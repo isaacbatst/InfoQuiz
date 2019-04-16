@@ -52,3 +52,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'QuestaoController';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+$route['questao'] = "QuestaoController";
+//$route['questao-visualizar/(:num)'] = "QuestaoController/visualizar/$1";
+$route['questao-novo'] = "QuestaoController/novo";
+$route['questao-salvar'] = "QuestaoController/salvar";
+$route['questao-editar/(:num)'] = "QuestaoController/editar/$1";
+$route['questao-atualizar'] = "QuestaoController/atualizar";
+$route['questao-excluir/(:num)'] = "QuestaoController/excluir/$1";
