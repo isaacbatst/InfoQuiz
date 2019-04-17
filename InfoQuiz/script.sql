@@ -1,12 +1,12 @@
-CREATE DATABASE infoquiz;
+CREATE Database infoquiz;
 -- phpMyAdmin SQL Dump
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 14/04/2019 às 20:03
+-- Host: 127.0.0.1
+-- Generation Time: 17-Abr-2019 às 18:20
 -- Versão do servidor: 10.1.38-MariaDB
--- Versão do PHP: 7.3.3
+-- versão do PHP: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -20,16 +20,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `infoquiz`
+-- Database: `infoquiz`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `questao`
+-- Estrutura da tabela `questao`
 --
 
-CREATE TABLE `questao` (
+CREATE TABLE infoquiz.questao (
   `id` int(11) NOT NULL,
   `pergunta` text,
   `alternativa_a` varchar(128) DEFAULT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `questao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Despejando dados para a tabela `questao`
+-- Extraindo dados da tabela `questao`
 --
 
 INSERT INTO `questao` (`id`, `pergunta`, `alternativa_a`, `alternativa_b`, `alternativa_c`, `alternativa_d`, `alternativa_correta`, `disciplina`) VALUES
@@ -145,25 +145,56 @@ INSERT INTO `questao` (`id`, `pergunta`, `alternativa_a`, `alternativa_b`, `alte
 (102, '&quot;Ã‰ o mecanismo pelo qual uma classe pode estender outra classe, aproveitando seus comportamentos e variÃ¡veis possÃ­veis.&quot; Na programaÃ§Ã£o orientada a objetos esta armaÃ§Ã£o refere-se aos conceitos essenciais de:', 'heranÃ§a, mÃ©todos e atributos.', 'subclasse, instÃ¢ncia e associaÃ§Ã£o.', 'subclasse, encapsulamento e abstraÃ§Ã£o.', 'heranÃ§a, abstraÃ§Ã£o e associaÃ§Ã£o.', 'a', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
 (103, 'A especificaÃ§Ã£o de uma comunicaÃ§Ã£o entre objetos, que contÃ©m informaÃ§Ãµes relacionadas ao que se espera resultar dessa atividade, Ã©:', 'uma restriÃ§Ã£o.', 'uma mensagem.', 'uma operaÃ§Ã£o.', 'um processo oculto.', 'b', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto');
 
+-- --------------------------------------------------------
+
 --
--- Índices de tabelas apagadas
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `username` varchar(20) DEFAULT NULL,
+  `password` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `username`, `password`) VALUES
+(1, 'isaac', 'batst');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `questao`
+-- Indexes for table `questao`
 --
 ALTER TABLE `questao`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- Indexes for table `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `questao`
+-- AUTO_INCREMENT for table `questao`
 --
 ALTER TABLE `questao`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
