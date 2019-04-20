@@ -6,7 +6,7 @@
         </tr>
         <tr>
             <td>Senha</td>
-            <td><input type="text" name="password"/></td>
+            <td><input type="password" name="password"/></td>
         </tr>
         <tr>
             <td><input type="submit" value="Salvar"/></td>
