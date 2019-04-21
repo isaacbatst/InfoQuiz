@@ -17,34 +17,21 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-google-plus-g"></i>
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/isaacbatst/InfoQuiz">
+                <i class="fab fa-fw fa-github"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-twitter"></i>
+              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://trello.com/b/btaIo3R5/desenvolvimento-do-site">
+                <i class="fab fa-fw fa-trello"></i>
               </a>
             </li>
-            <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
-                <i class="fab fa-fw fa-dribbble"></i>
-              </a>
-            </li>
+           
           </ul>
         </div>
         <div class="col-md-4">
           <h4 class="text-uppercase mb-4">Sobre o SuperQuiz</h4>
           <p class="lead mb-0">Lorem ipsum dolor sit amet. 
-            <a class="btn btn-outline-light btn-social text-center rounded-circle" 
-                href="https://github.com/isaacbatst/InfoQuiz">
-                <i class="fab fa-fw fa-github"></i>
-            </a>
           </p>
         </div>
       </div>
