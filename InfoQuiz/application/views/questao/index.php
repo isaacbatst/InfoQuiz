@@ -11,7 +11,7 @@
 			<hr class="star-dark mb-5">
 			<div class="container" style="padding-bottom:30px">
     <div>
-      <td><?=anchor('questao-novo','Nova Questao', array("class" => "btn btn-xl btn-outline-dark"))?></td>
+      <td><?=anchor('questao-novo','Nova Questão', array("class" => "btn btn-xl btn-outline-dark"))?></td>
       <td><?=anchor('index','Voltar', array("class" => "btn btn-xl btn-outline-dark"))?></td>
     </div>
   </div>

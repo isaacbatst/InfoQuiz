@@ -1,10 +1,4 @@
-<table >
-    <tr>
-        <td><?=anchor('index','Página Inicial')?></td>
-        <td><?=anchor('usuario-novo','Novo Usuário')?></td>
-    </tr>
-</table>
-
+<section class="userslist" id="userslist" style="padding-top:130px">
 <?php if ($usuarios == FALSE): ?>
     <h3>Nenhum usuário encontrado</h3>
 <?php else: ?>
@@ -12,7 +6,6 @@
 
 
 <!--Lista Users-->
-<section class="userslist" id="userslist" style="padding-top:130px">
     <div class="container">
       <h2 class="text-center text-uppercase text-secondary mb-0">Usuários</h2>
       <hr class="star-dark mb-5">
