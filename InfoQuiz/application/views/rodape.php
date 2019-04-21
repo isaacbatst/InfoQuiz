@@ -3,12 +3,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">2215 John Daniel Drive
-            <br>Clark, MO 65243</p>
+          <h4 class="text-uppercase mb-4">Localização</h4>
+          <p class="lead mb-0">    Rua Brusque, 2926, 
+            <br>Conjunto Santa Catarina, 
+            <br>Potengi | Natal-RN | CEP: 59112-490 </p>
         </div>
         <div class="col-md-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Around the Web</h4>
+          <h4 class="text-uppercase mb-4">Redes Sociais</h4>
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
               <a class="btn btn-outline-light btn-social text-center rounded-circle" href="#">
@@ -38,9 +39,13 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <h4 class="text-uppercase mb-4">About Freelancer</h4>
-          <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+          <h4 class="text-uppercase mb-4">Sobre o SuperQuiz</h4>
+          <p class="lead mb-0">Lorem ipsum dolor sit amet. 
+            <a class="btn btn-outline-light btn-social text-center rounded-circle" 
+                href="https://github.com/isaacbatst/InfoQuiz">
+                <i class="fab fa-fw fa-github"></i>
+            </a>
+          </p>
         </div>
       </div>
     </div>
