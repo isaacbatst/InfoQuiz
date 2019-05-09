@@ -79,3 +79,6 @@ $route['index-index'] = "IndexController/index";
 $route['login-autenticar'] = "LoginController/autenticar";
 $route['login-logout'] = "LoginController/logout";
 
+//Rota Questionário
+$route['questionario-index/(:num)'] = "QuestionarioController/index/$1";
+

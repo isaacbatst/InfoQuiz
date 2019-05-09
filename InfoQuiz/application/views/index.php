@@ -10,6 +10,8 @@
 
 
  <!-- ADM Section -->
+
+ 
  <section class="bg-primary text-white mb-0" id="adm">
     <div class="container">
       <h2 class="text-center text-uppercase text-white">ADM's Area</h2>
@@ -57,13 +59,24 @@
 						<br/>
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-xl" id="Login">Login</button>
+              <?=anchor('questionario-index','Questionário ', array("class" => "btn btn-primary btn-x1"))?>
             </div>	
 					<?=form_close()?>
         </div>
       </div>
     </div>
+     <div class="container">
+   <div class="row justify-content-center">
+      <div class="col-md-6">
+        
+      </div>
+    </div>
+  </div>
+    
+</div>
   </section>
 <?php endif ?>
+
 
 
 
