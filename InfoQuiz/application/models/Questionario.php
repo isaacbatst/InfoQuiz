@@ -3,9 +3,10 @@
 
         function get($qtd) {
             if($qtd){
+              $this->db->order_by('id', 'RANDOM');
               $this->db->limit($qtd);
-              $sql = $this->db->order_by('id', 'RANDOM');
-              return $sql->result_array();
+              $query = $this->db->get('questao');
+              return $query->result_array();
               
             }else{
                 echo("Erro.");

@@ -59,16 +59,15 @@
 						<br/>
             <div class="form-group">
               <button type="submit" class="btn btn-primary btn-xl" id="Login">Login</button>
-              <?=anchor('questionario-index','Questionário ', array("class" => "btn btn-primary btn-x1"))?>
             </div>	
 					<?=form_close()?>
         </div>
       </div>
-    </div>
-     <div class="container">
-   <div class="row justify-content-center">
-      <div class="col-md-6">
-        
+      
+  
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <?=anchor('questionario-index','Questionário ', array("class" => "btn btn-primary btn-x1"))?>
       </div>
     </div>
   </div>

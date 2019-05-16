@@ -1,32 +1,46 @@
-<div class="container">
-	<div class="row">
+<div class="container mt-5 py-5">
+	<div class="row my-5">
 		<div class="col-md-12">
 		<?php foreach ($questoes as $questao): ?>
-			<h1><?=$questao['pergunta']?></h1>
-			<form>
-				<div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-				  <label class="form-check-label" for="exampleRadios1">
-				    Default radio
-				  </label>
+			<div class="row my-3">
+				<div class="col">
+					<h4><?=$questao['pergunta']?></h4>
+						<form>
+							<div class="form-check alert alert-success">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="alternativa_a" checked>
+							  <label class="form-check-label" for="exampleRadios1">
+							    <?=$questao['alternativa_a']?>
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="alternativa_b">
+							  <label class="form-check-label" for="exampleRadios2">
+							    <?=$questao['alternativa_b']?>
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="alternativa_c" >
+							  <label class="form-check-label" for="exampleRadios3">
+							    <?=$questao['alternativa_c']?>
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="alternativa_d" >
+							  <label class="form-check-label" for="exampleRadios3">
+							    <?=$questao['alternativa_d']?>
+							  </label>
+							</div>
+						</form>	
 				</div>
-				<div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-				  <label class="form-check-label" for="exampleRadios2">
-				    Second default radio
-				  </label>
-				</div>
-				<div class="form-check">
-				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-				  <label class="form-check-label" for="exampleRadios3">
-				    Disabled radio
-				  </label>
-				</div>
-				<button type="submit" class="btn btn-primary">Primary</button>
-
-			</form>
+			</div>
 			
 		<?php endforeach; ?>
+		</div>
+	</div>
+	<div class="row">
+	
+		<div class="col">
+			<button type="submit" class="btn btn-primary">Enviar</button>
 		</div>
 	</div>
 </div>

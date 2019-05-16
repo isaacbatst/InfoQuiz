@@ -10,9 +10,10 @@
 
 	echo "Olá ".$_SESSION["nome"]. " seja bem-vindo(a) ao Super Quiz! <br> <br>";
 
-	$conexao = mysqli_connect("localhost", "root","","quiz");
+	$conexao = mysqli_connect("localhost", "root","","infoquiz");
 
- 	$sql = "SELECT pergunta, alternativa_a, alternativa_b,alternativa_c, alternativa_d, alternativa_correta FROM questoes ORDER BY RAND() LIMIT $quantidade";
+	if ($conexao) {
+		$sql = "SELECT pergunta, alternativa_a, alternativa_b,alternativa_c, alternativa_d, alternativa_correta FROM questao ORDER BY RAND() LIMIT ".$quantidade;
 
  	$resultado = mysqli_query($conexao, $sql);
  	//$linha = mysqli_fetch_row($resultado); O erro era causado por essa linha. quando eu comentei, parou de dar erro!!!!!
@@ -23,6 +24,7 @@
 		<html>
 		<head>
 			<title></title>
+			<meta charset="UTF-8">
 		</head>
 		<style type="text/css">
 			body{
@@ -76,4 +78,9 @@
 		</form>
 	<?php
 
-	} else {echo "erro na conexão com o banco";}
+	} else {echo "erro na query com o banco";}
+}else{
+	echo "erro na conexão";
+}
+
+ 	
