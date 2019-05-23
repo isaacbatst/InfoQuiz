@@ -49,9 +49,5 @@
           $this->Questao->excluir($id);
           redirect('questao-index');
         }
-<<<<<<< HEAD
 
  }
-=======
-  	}
->>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99

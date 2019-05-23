@@ -15,12 +15,15 @@
 							<div class="form-check">
 							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="alternativa_b">
 							  <label class="form-check-label" for="exampleRadios2">
+
 							    <?=utf8_decode($questao['alternativa_b'] )?>
+
 							  </label>
 							</div>
 							<div class="form-check">
 							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="alternativa_c" >
 							  <label class="form-check-label" for="exampleRadios3">
+
 							    <?=utf8_decode($questao['alternativa_c'] )?>
 							  </label>
 							</div>
@@ -28,9 +31,10 @@
 							  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="alternativa_d" >
 							  <label class="form-check-label" for="exampleRadios4">
 							    <?=utf8_decode($questao['alternativa_d'] )?>
+
 							  </label>
 							</div>
-						</form>	
+					</form>	
 				</div>
 			</div>
 			

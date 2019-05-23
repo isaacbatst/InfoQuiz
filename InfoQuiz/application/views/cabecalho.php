@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -24,6 +22,7 @@
 
   <!-- Custom styles for this template -->
   <link href="<?= base_url()?>/assets/css/freelancer.min.css" rel="stylesheet">
+
    <link href="<?= base_url()?>/assets/css/style.css" rel="stylesheet">
 
 
@@ -33,6 +32,7 @@
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-verde fixed-top text-uppercase " id="mainNav">
+
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><?=$titulo?></a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,21 +43,9 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item mx-0 mx-lg-1">
           	<?=anchor('index-index','Início ', array("class" => "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"))?>
+
           </li>
         </ul>
       </div>
     </div>
   </nav>
-=======
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Quiz</title>
-        <style type="text/css">
-            td{text-align: center;padding: 15px;}
-        </style>
-    </head>
-    <body>
-        
-        <h1><?=$titulo?></h1>
->>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99

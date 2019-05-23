@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 <section id="editarsuario" style="padding-top:50px">
     <div class="container">
       <h2 class="text-center text-uppercase text-secondary mb-0"><?=$titulo?></h2>
@@ -34,21 +32,6 @@
       	</div>
 			</div>
 		</div>
+
+
   </section>
-=======
-<?=form_open('usuario-atualizar')?>
-    <input type="hidden" name="id" value="<?=$usuario['id']?>">
-    <table>
-        <tr>
-            <td>Nome de Usuário</td>
-            <td><input type="text" name="username" value="<?=$usuario['username']?>"/></td>
-        </tr>
-        <tr>
-            <td>Senha</td>
-            <td><input type="text" name="password" value="<?=$usuario['password']?>"/></td>
-        </tr>
-    </table>
-    <input type="submit" value="Atualizar"/>
-<?=form_close()?>
-<?=anchor('usuario','Voltar')?>
->>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99

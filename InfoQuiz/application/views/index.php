@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="avisos" style="padding-top:106px; z-index:1000">
 	<?php if($this->session->flashdata("success")) : ?>
 	<p class='alert alert-success' style="margin-bottom:0"><?=$this->session->flashdata("success")?></p>
@@ -6,6 +5,7 @@
 	<?php if($this->session->flashdata("danger")) : ?>
 	<p class='alert alert-danger' style="margin-bottom:0"><?=$this->session->flashdata("danger")?></p>
 	<?php endif ?>
+
 </div>
 	<?php if($this->session->userdata("usuariologado")) : ?>
 
@@ -94,13 +94,3 @@
 
 
 
- 
-=======
-<table>
-    <tr>
-        <td><?=anchor('questao','Questões')?></td>
-        <td><?=anchor('usuario','Usuários')?></td>
-
-    </tr>
-</table>
->>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99

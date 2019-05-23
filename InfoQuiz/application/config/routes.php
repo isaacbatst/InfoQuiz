@@ -75,7 +75,7 @@ $route['usuario-excluir/(:num)'] = "UsuarioController/excluir/$1";
 $route['index'] = "IndexController";
 $route['index-index'] = "IndexController/index";
 
-<<<<<<< HEAD
+
 //Rota Login
 $route['login-autenticar'] = "LoginController/autenticar";
 $route['login-logout'] = "LoginController/logout";
@@ -83,5 +83,3 @@ $route['login-logout'] = "LoginController/logout";
 //Rota Questionário
 $route['questionario-index/(:num)'] = "QuestionarioController/index/$1";
 
-=======
->>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99
