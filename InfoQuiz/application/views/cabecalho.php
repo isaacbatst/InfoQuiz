@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -47,3 +48,16 @@
       </div>
     </div>
   </nav>
+=======
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Quiz</title>
+        <style type="text/css">
+            td{text-align: center;padding: 15px;}
+        </style>
+    </head>
+    <body>
+        
+        <h1><?=$titulo?></h1>
+>>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99

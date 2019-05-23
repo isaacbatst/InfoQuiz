@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section id="novousuario" style="padding-top:150px">
     <div class="container">
       <h2 class="text-center text-uppercase text-secondary mb-0">Novo Usuário</h2>
@@ -32,3 +33,22 @@
 			</div>
 		</div>
   </section>
+=======
+<?=form_open('usuario-salvar')?>
+    <table>
+        <tr>
+            <td>Nome de Usuário</td>
+            <td><input type="text" name="username"/></td>
+        </tr>
+        <tr>
+            <td>Senha</td>
+            <td><input type="text" name="password"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Salvar"/></td>
+        </tr>
+    </table>
+    
+<?=form_close()?>
+<?=anchor('usuario','Voltar')?>
+>>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99

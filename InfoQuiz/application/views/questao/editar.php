@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <section id="novoquestao" style="padding-top:150px">
     <div class="container">
       <h2 class="text-center text-uppercase text-secondary mb-0"><?=$titulo?></h2>
@@ -68,6 +69,8 @@
 			</div>
 		</div>
   </section>
+=======
+>>>>>>> 758110b37310d86de3a22cf55f1f651136f2dd99
 <?=form_open('questao-atualizar')?>
     <input type="hidden" name="id" value="<?=$questao['id']?>">
     <table>
