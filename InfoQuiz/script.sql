@@ -1,12 +1,51 @@
-
-CREATE Database infoquiz;
-
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: 31-Maio-2019 às 00:24
+-- Versão do servidor: 10.1.10-MariaDB
+-- PHP Version: 7.0.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `infoquiz`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `disciplinas`
+--
+
+CREATE TABLE `disciplinas` (
+  `id` int(11) NOT NULL,
+  `disciplina` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `disciplinas`
+--
+
+INSERT INTO `disciplinas` (`id`, `disciplina`) VALUES
+(1, 'Algoritmo'),
+(2, 'Conceitos básicos de programação'),
+(3, 'Estrutura de Dados'),
+(4, 'Engenharia de Software'),
+(5, 'Programação Orientada a Objetos');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `questao`
 --
 
 CREATE TABLE `questao` (
@@ -21,7 +60,7 @@ CREATE TABLE `questao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Despejando dados para a tabela `questao`
+-- Extraindo dados da tabela `questao`
 --
 
 INSERT INTO `questao` (`id`, `pergunta`, `alternativa_a`, `alternativa_b`, `alternativa_c`, `alternativa_d`, `alternativa_correta`, `disciplina`) VALUES
@@ -84,55 +123,55 @@ INSERT INTO `questao` (`id`, `pergunta`, `alternativa_a`, `alternativa_b`, `alte
 (59, 'NÃƒO Ã‰ uma tÃ©cnica tÃ­pica de teste de caixa preta:', 'teste de tabela de decisÃ£o.', 'teste de todos os pares.', 'teste de integraÃ§Ã£o.', 'teste de caso de uso.', 'c', 'Engenharia de software'),
 (60, 'Tipo de teste que focaliza cada componente de um software de forma individual, garantindo que o componente funciona adequadamente:', 'Teste de IntegraÃ§Ã£o.', 'Teste de Unidade.', 'Teste de RegressÃ£o.', 'Teste de ValidaÃ§Ã£o.', 'b', 'Engenharia de software'),
 (61, 'O ponto de partida para o planejamento do projeto Ã© o:', 'Plano de trabalho.', 'Descritivo das funcionalidades.', 'Escopo', 'Documento de autorizaÃ§Ã£o do projeto.', 'c', 'Engenharia de software'),
-(62, 'O erro que ocorre quando tentamos armazenar mais bits do que uma capacidade estabelecida para uma variÃ¡vel Ã© conhecido como:', 'ExceÃ§Ã£o', 'Overflow', 'Warning', 'Bug', 'b', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(63, 'Em uma linguagem de programaÃ§Ã£o, considere um tipo de dado inteiro que utiliza 2 bytes de memÃ³ria para seu armazenamento. Quantos valores Ãºnicos diferentes Ã© possÃ­vel colocar nesse espaÃ§o no decorrer da execuÃ§Ã£o de um programa?', '256.', '32768.', '65536.', '16777216.', 'c', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(64, 'As etapas realizadas durante a programaÃ§Ã£o em uma linguagem de alto nÃ­vel, para se gerar um cÃ³digo executÃ¡vel, sÃ£o:', 'Programa fonte, compilaÃ§Ã£o, interpretaÃ§Ã£o, ligaÃ§Ã£o, cÃ³digo executÃ¡vel.', 'Programa fonte, compilaÃ§Ã£o, cÃ³digo-objeto, ligaÃ§Ã£o, cÃ³digo executÃ¡vel.', 'Programa fonte, interpretaÃ§Ã£o, cÃ³digo-objeto, ligaÃ§Ã£o, cÃ³digo executÃ¡vel.', 'Programa fonte, montagem, compilaÃ§Ã£o, cÃ³digo-objeto, cÃ³digo executÃ¡vel.', 'b', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(65, 'Objeto que se constitui parcialmente ou Ã© definido em termos de si prÃ³prio. Nesse contexto, um tipo especial de procedimento (algoritmo) serÃ¡ utilizado, algumas vezes, para a soluÃ§Ã£o de alguns problemas. Esse procedimento Ã© denominado:', 'Recursividade.', 'Rotatividade.', 'RepetiÃ§Ã£o.', 'InterligaÃ§Ã£o.', 'a', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(66, 'SÃ£o exemplos tÃ­picos de linguagem de computador interpretada:', 'SourceSafe, Swing e Xcode.', 'CCFinderX, Pearl e Xcode.', 'Python, SourceSafe e Javadoc.', 'Pearl, Python e Ruby.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(67, 'Permitem escrever trechos de cÃ³digo da linguagem usada na pÃ¡gina:', 'FunÃ§Ãµes.', 'Scriptlets.', 'LaÃ§os.', 'ComentÃ¡rios.', 'b', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(68, 'A programaÃ§Ã£o de computadores, desde a sua criaÃ§Ã£o, evoluiu das linguagens em cÃ³digo binÃ¡rio atÃ© as atuais linguagens de alto nÃ­vel, orientadas a objetos. Assinale a alternativa que possui, nessa ordem, uma linguagem binÃ¡ria, uma linguagem estruturada e uma linguagem orientada a objetos.', 'Linguagem C, Cobol, Fortran.', 'Basic, Cobol, Linguagem C.', 'Pascal, Cobol, Fortran.', 'Assembly, Pascal, Java.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(71, 'Programar o computador significa &quot;dar ordens a ele,&quot; as quais sÃ£o executadas sequencialmente. Em tal paradigma, &quot;representar&quot; a soluÃ§Ã£o de um problema para ser resolvido pelo computador envolve escrever uma sÃ©rie de aÃ§Ãµes que, se executadas sequencialmente, levam Ã  soluÃ§Ã£o. Trata-se do paradigma:', 'ProgramaÃ§Ã£o em LÃ³gica.', 'Funcional.', 'Orientado a Objetos.', 'Procedural.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(72, 'AlÃ©m do diagrama de blocos hÃ¡ uma outra forma de notaÃ§Ã£o grÃ¡fica utilizada para representar algoritmos, que Ã© conhecida por vÃ¡rios nomes. Abaixo sÃ£o apresentados alguns destes nomes, a tÃ©cnica de algoritmizaÃ§Ã£o em que estÃ¡ baseada Ã¡ uma alternativa que NÃƒO se refere nem Ã  tÃ©cnica nem a um dos referidos nomes, assinale-a:', 'PortuguÃªs estruturado.', 'Pseudo-cÃ³digo.', 'Portugol.', 'DFD-Diagrama de Fluxo de Dados.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(73, 'Muitos programadores de computador costumam preparar um programa iniciando-o a partir de um diagrama de blocos. Para tal, pode-se utilizar as seguintes tÃ©cnicas de lÃ³gica, EXCETO:', 'Linear.', 'Estruturada.', 'Modular.', 'Diagrama de Carter.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(74, 'Em relaÃ§Ã£o Ã s linguagens compiladas, sabe-se que muitos erros sÃ£o eliminados durante o processo de compilaÃ§Ã£o. SÃ£o tipos de erros sintÃ¡ticos eliminados na compilaÃ§Ã£o os abaixo relacionados, EXCETO:', 'caracteres invÃ¡lidos;', 'nomes de variÃ¡veis invÃ¡lidas;', 'mÃ©todos invÃ¡lidos;', 'atribuiÃ§Ã£o de um valor alfanumÃ©rico para uma variÃ¡vel interna.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(71, 'Programar o computador significa &quot;dar ordens a ele,&quot; as quais sÃ£o executadas sequencialmente. Em tal paradigma, &quot;representar&quot; a soluÃ§Ã£o de um problema para ser resolvido pelo computador envolve escrever uma sÃ©rie de aÃ§Ãµes que, se executadas sequencialmente, levam Ã  soluÃ§Ã£o. Trata-se do paradigma:', 'ProgramaÃ§Ã£o em LÃ³gica.', 'Funcional.', 'Orientado a Objetos.', 'Procedural.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(72, 'AlÃ©m do diagrama de blocos hÃ¡ uma outra forma de notaÃ§Ã£o grÃ¡fica utilizada para representar algoritmos, que Ã© conhecida por vÃ¡rios nomes. Abaixo sÃ£o apresentados alguns destes nomes, a tÃ©cnica de algoritmizaÃ§Ã£o em que estÃ¡ baseada Ã¡ uma alternativa que NÃƒO se refere nem Ã  tÃ©cnica nem a um dos referidos nomes, assinale-a:', 'PortuguÃªs estruturado.', 'Pseudo-cÃ³digo.', 'Portugol.', 'DFD-Diagrama de Fluxo de Dados.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(73, 'Muitos programadores de computador costumam preparar um programa iniciando-o a partir de um diagrama de blocos. Para tal, pode-se utilizar as seguintes tÃ©cnicas de lÃ³gica, EXCETO:', 'Linear.', 'Estruturada.', 'Modular.', 'Diagrama de Carter.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(74, 'Em relaÃ§Ã£o Ã s linguagens compiladas, sabe-se que muitos erros sÃ£o eliminados durante o processo de compilaÃ§Ã£o. SÃ£o tipos de erros sintÃ¡ticos eliminados na compilaÃ§Ã£o os abaixo relacionados, EXCETO:', 'caracteres invÃ¡lidos;', 'nomes de variÃ¡veis invÃ¡lidas;', 'mÃ©todos invÃ¡lidos;', 'atribuiÃ§Ã£o de um valor alfanumÃ©rico para uma variÃ¡vel interna.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(75, 'O utilitÃ¡rio responsÃ¡vel por gerar, a partir de um ou mais mÃ³dulos-objeto, um Ãºnico programa executÃ¡vel Ã© conhecido como:', 'tradutor.', 'montador.', 'compilador.', 'linker.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(76, 'Quando num programa que utiliza linguagem orientada a objetos aparece um objeto que realiza aÃ§Ãµes diferentes, dependendo da operaÃ§Ã£o, ou seja, a mesma operaÃ§Ã£o pode atuar de modos diversos em classes diferentes, estÃ¡-se diante de um(a):', 'heranÃ§a mÃºltipla.', 'polimorfismo.', 'caso de uso de engenharia reversa.', 'atributo multivalorado.', 'b', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(77, 'A recursividade na programaÃ§Ã£o de computadores envolve a definiÃ§Ã£o de uma funÃ§Ã£o que:', 'apresenta outra funÃ§Ã£o como resultado.', 'pode chamar a si mesma.', 'aponta para uma variÃ¡vel.', 'chama uma outra funÃ§Ã£o.', 'b', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(78, 'Assinale a alternativa que apresenta duas formas de passagem de parÃ¢metros para uma rotina ou funÃ§Ã£o.', 'Por inferÃªncia e por valor.', 'Por memÃ³ria e por disco.', 'Por valor e por referÃªncia.', 'Por teste e por reforÃ§o.', 'c', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(79, 'As palavras reservadas estÃ£o diretamente associadas ao conceito de:', 'variable.', 'alias.', 'identifier.', 'data type.', 'c', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(80, 'Permitem escrever trechos de cÃ³digo da linguagem usada na pÃ¡gina:', 'FunÃ§Ãµes.', 'Scriptlets.', 'LaÃ§os.', 'ComentÃ¡rios.', 'b', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(81, 'A programaÃ§Ã£o de computadores, desde a sua criaÃ§Ã£o, evoluiu das linguagens em cÃ³digo binÃ¡rio atÃ© as atuais linguagens de alto nÃ­vel, orientadas a objetos. Assinale a alternativa que possui, nessa ordem, uma linguagem binÃ¡ria, uma linguagem estruturada e uma linguagem orientada a objetos.', 'Linguagem C, Cobol, Fortran.', 'Basic, Cobol, Linguagem C.', 'Pascal, Cobol, Fortran.', 'Assembly, Pascal, Java.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(82, 'Assinale a alternativa correta a respeito das variÃ¡veis e constantes, utilizadas em diversas linguagens de programaÃ§Ã£o.', 'O nÃºmero de constantes deve ser menor ou igual ao nÃºmero de variÃ¡veis em um programa.', 'O nÃºmero de constantes deve ser menor ou igual ao nÃºmero de procedimentos em um programa.', 'O nÃºmero de constantes deve ser igual ao nÃºmero de variÃ¡veis em um programa.', 'O nÃºmero de constantes independe da quantidade de variÃ¡veis em um programa.', 'd', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(83, 'As linguagens de programaÃ§Ã£o imperativas sÃ£o caracterizadas por trÃªs conceitos:', 'VariÃ¡veis, AtribuiÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'FunÃ§Ãµes, AtribuiÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'VariÃ¡veis, DefiniÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'FunÃ§Ãµes, DefiniÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'a', 'Conceitos bÃ¡sicos de programaÃ§Ã£o'),
-(84, 'Sobre programaÃ§Ã£o estruturada e programaÃ§Ã£o orientada a objetos, Ã© INCORRETO afirmar que:', 'A linguagem de programaÃ§Ã£o C++ Ã© um exemplo de linguagem orientada a objetos, que nÃ£o permite a utilizaÃ§Ã£o do paradigma es', 'No paradigma de programaÃ§Ã£o estruturado, qualquer problema pode ser dividido em problemas menores, chamados de funÃ§Ãµes.', 'A linguagem de programaÃ§Ã£o C Ã© um exemplo de linguagem de programaÃ§Ã£o estruturada, compilada e procedural.', 'O paradigma orientado a objetos entende o problema como um conjunto de objetos interagindo por meio de troca de mensagens.', 'a', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(85, 'Em POO (ProgramaÃ§Ã£o Orientada a Objetos), dizer que a classe A estende a classe B Ã© o mesmo que dizer que:', 'a classe B Ã© subclasse de A;', 'a classe A Ã© superclasse de B;', 'a classe A Ã© derivada de B;', 'a classe B Ã© derivada de A;', 'c', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(86, 'Em POO (programaÃ§Ã£o orientada a objetos), dizer que a classe A Ã© superclasse de B Ã© o mesmo que dizer que:', 'A Ã© derivada de B.', 'A estende B.', 'B Ã© derivada de A.', 'B implementa A.', 'c', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(87, 'Na programaÃ§Ã£o orientada a objetos, o conceito de polimorfismo indica que:', 'uma certa operaÃ§Ã£o de uma classe pode nem sempre ativar o mesmo mÃ©todo.', 'o cÃ³digo de cada operaÃ§Ã£o tem um limite mÃ¡ximo no nÃºmero de linhas de cÃ³digo.', 'o nome dos mÃ©todos deve ser composto por, no mÃ¡ximo, 8 caracteres.', 'o nome das classes deve ser composto por, no mÃ¡ximo, 20 caracteres.', 'a', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(88, 'Acerca da programaÃ§Ã£o Orientada a Objetos, OVERLOADING Ã© a habilidade de poder definir diversas propriedades, mÃ©todos ou procedimentos em uma classe com o mesmo nome, que tambÃ©m pode ser definida como:', 'PirÃ¢mide.', 'Pilha.', 'Morphing.', 'Sobrecarga.', 'd', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(89, 'Sobre a POO (ProgramaÃ§Ã£o Orientada a Objetos), assinale a alternativa INCORRETA.', 'Classe Pai, classe Base ou Superclasse Ã© a classe que foi herdada.', 'Classe Filha ou Sub-Classe Ã© a classe que herda da classe Pai.', 'Instancias - sÃ£o caracterÃ­sticas de um objeto.', 'MÃ©todos definem as habilidades dos objetos.', 'c', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(90, 'Em um programa em C# sÃ£o adicionados vÃ¡rios valores do tipo int em uma implementaÃ§Ã£o da classe Stack, vamos supor que vocÃª queira remover todos objetos da fila, qual mÃ©todo vocÃª deve usar ?', 'Stack.Pop', 'Stack.Push', 'Stack.Clear', 'Stack.Peek', 'c', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(91, 'Em programaÃ§Ã£o orientada a objetos, a possibilidade de haver funÃ§Ãµes de mesmo nome, com funcionalidades similares em classes sem nenhuma relaÃ§Ã£o entre elas, denomina-se:', 'encapsulamento.', 'objeto.', 'classe.', 'polimorfismo.', 'd', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(92, 'Sobre orientaÃ§Ã£o a objetos, Ã© correto armar:', 'Uma classe Ã© o projeto do objeto. Ela informa Ã  mÃ¡quina virtual como criar um objeto de um tipo especÃ­fico. Cada objeto cria', 'Um relacionamento de heranÃ§a significa que a superclasse herdarÃ¡ as variÃ¡veis de instÃ¢ncia e mÃ©todos da subclasse.', 'Uma interface Ã© uma classe 100% abstrata, ou seja, uma classe que nÃ£o pode ser instanciada.', 'Os objetos tÃªm seu estado definido pelos mÃ©todos e seu comportamento definido nas variÃ¡veis de instÃ¢ncia.', 'c', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(93, 'Dentro do paradigma de programaÃ§Ã£o orientada a objetos (POO), hÃ¡ um mecanismo utilizado para impedir o acesso direto ao estado de um objeto, restando apenas os mÃ©todos externos que podem alterar esses estados. Assinale a alternativa que apresenta o nome deste mecanismo.', 'Mensagem', 'HeranÃ§a', 'Polimorfismo', 'Encapsulamento', 'd', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(94, 'Na taxonomia utilizada para as formas de polimorfismo sÃ£o, respectivamente, dois tipos categorizados como universal e dois como Ad Hoc:', 'ParamÃ©trico e InclusÃ£o; Sobrecarga e CoerÃ§Ã£o.', 'ParamÃ©trico e CoerÃ§Ã£o; Sobrecarga e InclusÃ£o.', 'ParamÃ©trico e Sobrecarga; InclusÃ£o e CoerÃ§Ã£o.', 'Sobrecarga e InclusÃ£o; ParamÃ©trico e CoerÃ§Ã£o.', 'a', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(95, 'Na taxonomia utilizada para as formas de polimorfismo sÃ£o, respectivamente, dois tipos categorizados como universal e dois como Ad Hoc:', 'ParamÃ©trico e InclusÃ£o; Sobrecarga e CoerÃ§Ã£o.', 'ParamÃ©trico e CoerÃ§Ã£o; Sobrecarga e InclusÃ£o.', 'ParamÃ©trico e Sobrecarga; InclusÃ£o e CoerÃ§Ã£o.', 'Sobrecarga e InclusÃ£o; ParamÃ©trico e CoerÃ§Ã£o.', 'a', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(96, 'MÃ©todo especial destinado ao preparo de novos objetos durante sua instanciaÃ§Ã£o. Pode ser acionado por meio do operador new, recebendo parÃ¢metros como mÃ©todos comuns, o que permite caracterizar os objetos jÃ¡ na instanciaÃ§Ã£o. Trata-se de', 'operaÃ§Ã£o polimÃ³rfica.', 'construtor.', 'atributo.', 'heranÃ§a polimÃ³rfica.', 'b', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(97, 'Sobre a programaÃ§Ã£o orientada a objetos, Ã© incorreto armar que:', 'uma interface Ã© uma classe abstrata que nÃ£o pode ser instanciada.', 'as interfaces permitem explorar o polimorfismo.', 'uma classe abstrata significa que ela deve ser estendida; um mÃ©todo abstrato significa que ele deve ser sobreposto.', 'um mÃ©todo abstrato pode estar presente em uma classe nÃ£o abstrata, desde que nÃ£o tenha corpo.', 'd', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(98, 'Dentro do paradigma de programaÃ§Ã£o orientada a objetos (POO), hÃ¡ um mecanismo pelo qual uma classe pode estender outra classe, aproveitando seus mÃ©todos e atributos. Assinale a alternativa que apresenta o nome desse mecanismo.', 'heranÃ§a.', 'mensagem.', 'encapsulamento.', 'polimorfismo.', 'a', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(99, 'Classes que encapsulam os tipos primitivos como objetos, agregando funcionalidades de conversÃ£o, sÃ£o as chamadas, especificamente, classes:', 'mothers.', 'abstratas.', 'primitivas.', 'wrappers.', 'd', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(100, 'A descriÃ§Ã£o de um conjunto de entidades (reais ou abstratas) de um mesmo tipo e com as mesmas caracterÃ­sticas e comportamentos. Trata-se da definiÃ§Ã£o de:', 'String.', 'MÃ©todo.', 'Conjunto.', 'Classe.', 'd', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(101, 'Na programaÃ§Ã£o orientada a objetos existem quatro tipos de polimorfismos possÃ­veis de serem aplicados na estrutura de uma classe, a saber:', 'HierÃ¡rquico, Sobrecarga, Procedural e CoerÃ§Ã£o.', 'Incursivo, Exclusivo, Herdado e Implementado.', 'InclusÃ£o, ParamÃ©trico, Sobrecarga e CoerÃ§Ã£o.', 'Procedural, HierÃ¡rquico, ParamÃ©trico e Implementado.', 'c', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(102, '&quot;Ã‰ o mecanismo pelo qual uma classe pode estender outra classe, aproveitando seus comportamentos e variÃ¡veis possÃ­veis.&quot; Na programaÃ§Ã£o orientada a objetos esta armaÃ§Ã£o refere-se aos conceitos essenciais de:', 'heranÃ§a, mÃ©todos e atributos.', 'subclasse, instÃ¢ncia e associaÃ§Ã£o.', 'subclasse, encapsulamento e abstraÃ§Ã£o.', 'heranÃ§a, abstraÃ§Ã£o e associaÃ§Ã£o.', 'a', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto'),
-(103, 'A especificaÃ§Ã£o de uma comunicaÃ§Ã£o entre objetos, que contÃ©m informaÃ§Ãµes relacionadas ao que se espera resultar dessa atividade, Ã©:', 'uma restriÃ§Ã£o.', 'uma mensagem.', 'uma operaÃ§Ã£o.', 'um processo oculto.', 'b', 'ProgramaÃ§Ã£o Orientada Ã¡ Objeto');
+(62, 'O erro que ocorre quando tentamos armazenar mais bits do que uma capacidade estabelecida para uma variÃ¡vel Ã© conhecido como:', 'ExceÃ§Ã£o', 'Overflow', 'Warning', 'Bug', 'b', 'Conceitos Básicos de Programação'),
+(63, 'Em uma linguagem de programaÃ§Ã£o, considere um tipo de dado inteiro que utiliza 2 bytes de memÃ³ria para seu armazenamento. Quantos valores Ãºnicos diferentes Ã© possÃ­vel colocar nesse espaÃ§o no decorrer da execuÃ§Ã£o de um programa?', '256.', '32768.', '65536.', '16777216.', 'c', 'Conceitos Básicos de Programação'),
+(64, 'As etapas realizadas durante a programaÃ§Ã£o em uma linguagem de alto nÃ­vel, para se gerar um cÃ³digo executÃ¡vel, sÃ£o:', 'Programa fonte, compilaÃ§Ã£o, interpretaÃ§Ã£o, ligaÃ§Ã£o, cÃ³digo executÃ¡vel.', 'Programa fonte, compilaÃ§Ã£o, cÃ³digo-objeto, ligaÃ§Ã£o, cÃ³digo executÃ¡vel.', 'Programa fonte, interpretaÃ§Ã£o, cÃ³digo-objeto, ligaÃ§Ã£o, cÃ³digo executÃ¡vel.', 'Programa fonte, montagem, compilaÃ§Ã£o, cÃ³digo-objeto, cÃ³digo executÃ¡vel.', 'b', 'Conceitos Básicos de Programação'),
+(65, 'Objeto que se constitui parcialmente ou Ã© definido em termos de si prÃ³prio. Nesse contexto, um tipo especial de procedimento (algoritmo) serÃ¡ utilizado, algumas vezes, para a soluÃ§Ã£o de alguns problemas. Esse procedimento Ã© denominado:', 'Recursividade.', 'Rotatividade.', 'RepetiÃ§Ã£o.', 'InterligaÃ§Ã£o.', 'a', 'Conceitos Básicos de Programação'),
+(66, 'SÃ£o exemplos tÃ­picos de linguagem de computador interpretada:', 'SourceSafe, Swing e Xcode.', 'CCFinderX, Pearl e Xcode.', 'Python, SourceSafe e Javadoc.', 'Pearl, Python e Ruby.', 'd', 'Conceitos Básicos de Programação'),
+(67, 'Permitem escrever trechos de cÃ³digo da linguagem usada na pÃ¡gina:', 'FunÃ§Ãµes.', 'Scriptlets.', 'LaÃ§os.', 'ComentÃ¡rios.', 'b', 'Conceitos Básicos de Programação'),
+(68, 'A programaÃ§Ã£o de computadores, desde a sua criaÃ§Ã£o, evoluiu das linguagens em cÃ³digo binÃ¡rio atÃ© as atuais linguagens de alto nÃ­vel, orientadas a objetos. Assinale a alternativa que possui, nessa ordem, uma linguagem binÃ¡ria, uma linguagem estruturada e uma linguagem orientada a objetos.', 'Linguagem C, Cobol, Fortran.', 'Basic, Cobol, Linguagem C.', 'Pascal, Cobol, Fortran.', 'Assembly, Pascal, Java.', 'd', 'Conceitos Básicos de Programação'),
+(71, 'Programar o computador significa &quot;dar ordens a ele,&quot; as quais sÃ£o executadas sequencialmente. Em tal paradigma, &quot;representar&quot; a soluÃ§Ã£o de um problema para ser resolvido pelo computador envolve escrever uma sÃ©rie de aÃ§Ãµes que, se executadas sequencialmente, levam Ã  soluÃ§Ã£o. Trata-se do paradigma:', 'ProgramaÃ§Ã£o em LÃ³gica.', 'Funcional.', 'Orientado a Objetos.', 'Procedural.', 'd', 'Conceitos Básicos de Programação'),
+(72, 'AlÃ©m do diagrama de blocos hÃ¡ uma outra forma de notaÃ§Ã£o grÃ¡fica utilizada para representar algoritmos, que Ã© conhecida por vÃ¡rios nomes. Abaixo sÃ£o apresentados alguns destes nomes, a tÃ©cnica de algoritmizaÃ§Ã£o em que estÃ¡ baseada Ã¡ uma alternativa que NÃƒO se refere nem Ã  tÃ©cnica nem a um dos referidos nomes, assinale-a:', 'PortuguÃªs estruturado.', 'Pseudo-cÃ³digo.', 'Portugol.', 'DFD-Diagrama de Fluxo de Dados.', 'd', 'Conceitos Básicos de Programação'),
+(73, 'Muitos programadores de computador costumam preparar um programa iniciando-o a partir de um diagrama de blocos. Para tal, pode-se utilizar as seguintes tÃ©cnicas de lÃ³gica, EXCETO:', 'Linear.', 'Estruturada.', 'Modular.', 'Diagrama de Carter.', 'd', 'Conceitos Básicos de Programação'),
+(74, 'Em relaÃ§Ã£o Ã s linguagens compiladas, sabe-se que muitos erros sÃ£o eliminados durante o processo de compilaÃ§Ã£o. SÃ£o tipos de erros sintÃ¡ticos eliminados na compilaÃ§Ã£o os abaixo relacionados, EXCETO:', 'caracteres invÃ¡lidos;', 'nomes de variÃ¡veis invÃ¡lidas;', 'mÃ©todos invÃ¡lidos;', 'atribuiÃ§Ã£o de um valor alfanumÃ©rico para uma variÃ¡vel interna.', 'd', 'Conceitos Básicos de Programação'),
+(71, 'Programar o computador significa &quot;dar ordens a ele,&quot; as quais sÃ£o executadas sequencialmente. Em tal paradigma, &quot;representar&quot; a soluÃ§Ã£o de um problema para ser resolvido pelo computador envolve escrever uma sÃ©rie de aÃ§Ãµes que, se executadas sequencialmente, levam Ã  soluÃ§Ã£o. Trata-se do paradigma:', 'ProgramaÃ§Ã£o em LÃ³gica.', 'Funcional.', 'Orientado a Objetos.', 'Procedural.', 'd', 'Conceitos Básicos de Programação'),
+(72, 'AlÃ©m do diagrama de blocos hÃ¡ uma outra forma de notaÃ§Ã£o grÃ¡fica utilizada para representar algoritmos, que Ã© conhecida por vÃ¡rios nomes. Abaixo sÃ£o apresentados alguns destes nomes, a tÃ©cnica de algoritmizaÃ§Ã£o em que estÃ¡ baseada Ã¡ uma alternativa que NÃƒO se refere nem Ã  tÃ©cnica nem a um dos referidos nomes, assinale-a:', 'PortuguÃªs estruturado.', 'Pseudo-cÃ³digo.', 'Portugol.', 'DFD-Diagrama de Fluxo de Dados.', 'd', 'Conceitos Básicos de Programação'),
+(73, 'Muitos programadores de computador costumam preparar um programa iniciando-o a partir de um diagrama de blocos. Para tal, pode-se utilizar as seguintes tÃ©cnicas de lÃ³gica, EXCETO:', 'Linear.', 'Estruturada.', 'Modular.', 'Diagrama de Carter.', 'd', 'Conceitos Básicos de Programação'),
+(74, 'Em relaÃ§Ã£o Ã s linguagens compiladas, sabe-se que muitos erros sÃ£o eliminados durante o processo de compilaÃ§Ã£o. SÃ£o tipos de erros sintÃ¡ticos eliminados na compilaÃ§Ã£o os abaixo relacionados, EXCETO:', 'caracteres invÃ¡lidos;', 'nomes de variÃ¡veis invÃ¡lidas;', 'mÃ©todos invÃ¡lidos;', 'atribuiÃ§Ã£o de um valor alfanumÃ©rico para uma variÃ¡vel interna.', 'd', 'Conceitos Básicos de Programação'),
+(75, 'O utilitÃ¡rio responsÃ¡vel por gerar, a partir de um ou mais mÃ³dulos-objeto, um Ãºnico programa executÃ¡vel Ã© conhecido como:', 'tradutor.', 'montador.', 'compilador.', 'linker.', 'd', 'Conceitos Básicos de Programação'),
+(76, 'Quando num programa que utiliza linguagem orientada a objetos aparece um objeto que realiza aÃ§Ãµes diferentes, dependendo da operaÃ§Ã£o, ou seja, a mesma operaÃ§Ã£o pode atuar de modos diversos em classes diferentes, estÃ¡-se diante de um(a):', 'heranÃ§a mÃºltipla.', 'polimorfismo.', 'caso de uso de engenharia reversa.', 'atributo multivalorado.', 'b', 'Conceitos Básicos de Programação'),
+(77, 'A recursividade na programaÃ§Ã£o de computadores envolve a definiÃ§Ã£o de uma funÃ§Ã£o que:', 'apresenta outra funÃ§Ã£o como resultado.', 'pode chamar a si mesma.', 'aponta para uma variÃ¡vel.', 'chama uma outra funÃ§Ã£o.', 'b', 'Conceitos Básicos de Programação'),
+(78, 'Assinale a alternativa que apresenta duas formas de passagem de parÃ¢metros para uma rotina ou funÃ§Ã£o.', 'Por inferÃªncia e por valor.', 'Por memÃ³ria e por disco.', 'Por valor e por referÃªncia.', 'Por teste e por reforÃ§o.', 'c', 'Conceitos Básicos de Programação'),
+(79, 'As palavras reservadas estÃ£o diretamente associadas ao conceito de:', 'variable.', 'alias.', 'identifier.', 'data type.', 'c', 'Conceitos Básicos de Programação'),
+(80, 'Permitem escrever trechos de cÃ³digo da linguagem usada na pÃ¡gina:', 'FunÃ§Ãµes.', 'Scriptlets.', 'LaÃ§os.', 'ComentÃ¡rios.', 'b', 'Conceitos Básicos de Programação'),
+(81, 'A programaÃ§Ã£o de computadores, desde a sua criaÃ§Ã£o, evoluiu das linguagens em cÃ³digo binÃ¡rio atÃ© as atuais linguagens de alto nÃ­vel, orientadas a objetos. Assinale a alternativa que possui, nessa ordem, uma linguagem binÃ¡ria, uma linguagem estruturada e uma linguagem orientada a objetos.', 'Linguagem C, Cobol, Fortran.', 'Basic, Cobol, Linguagem C.', 'Pascal, Cobol, Fortran.', 'Assembly, Pascal, Java.', 'd', 'Conceitos Básicos de Programação'),
+(82, 'Assinale a alternativa correta a respeito das variÃ¡veis e constantes, utilizadas em diversas linguagens de programaÃ§Ã£o.', 'O nÃºmero de constantes deve ser menor ou igual ao nÃºmero de variÃ¡veis em um programa.', 'O nÃºmero de constantes deve ser menor ou igual ao nÃºmero de procedimentos em um programa.', 'O nÃºmero de constantes deve ser igual ao nÃºmero de variÃ¡veis em um programa.', 'O nÃºmero de constantes independe da quantidade de variÃ¡veis em um programa.', 'd', 'Conceitos Básicos de Programação'),
+(83, 'As linguagens de programaÃ§Ã£o imperativas sÃ£o caracterizadas por trÃªs conceitos:', 'VariÃ¡veis, AtribuiÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'FunÃ§Ãµes, AtribuiÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'VariÃ¡veis, DefiniÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'FunÃ§Ãµes, DefiniÃ§Ãµes e LaÃ§os de IteraÃ§Ã£o.', 'a', 'Conceitos Básicos de Programação'),
+(84, 'Sobre programaÃ§Ã£o estruturada e programaÃ§Ã£o orientada a objetos, Ã© INCORRETO afirmar que:', 'A linguagem de programaÃ§Ã£o C++ Ã© um exemplo de linguagem orientada a objetos, que nÃ£o permite a utilizaÃ§Ã£o do paradigma es', 'No paradigma de programaÃ§Ã£o estruturado, qualquer problema pode ser dividido em problemas menores, chamados de funÃ§Ãµes.', 'A linguagem de programaÃ§Ã£o C Ã© um exemplo de linguagem de programaÃ§Ã£o estruturada, compilada e procedural.', 'O paradigma orientado a objetos entende o problema como um conjunto de objetos interagindo por meio de troca de mensagens.', 'a', 'Programação Orientada a Objetos'),
+(85, 'Em POO (ProgramaÃ§Ã£o Orientada a Objetos), dizer que a classe A estende a classe B Ã© o mesmo que dizer que:', 'a classe B Ã© subclasse de A;', 'a classe A Ã© superclasse de B;', 'a classe A Ã© derivada de B;', 'a classe B Ã© derivada de A;', 'c', 'Programação Orientada a Objetos'),
+(86, 'Em POO (programaÃ§Ã£o orientada a objetos), dizer que a classe A Ã© superclasse de B Ã© o mesmo que dizer que:', 'A Ã© derivada de B.', 'A estende B.', 'B Ã© derivada de A.', 'B implementa A.', 'c', 'Programação Orientada a Objetos'),
+(87, 'Na programaÃ§Ã£o orientada a objetos, o conceito de polimorfismo indica que:', 'uma certa operaÃ§Ã£o de uma classe pode nem sempre ativar o mesmo mÃ©todo.', 'o cÃ³digo de cada operaÃ§Ã£o tem um limite mÃ¡ximo no nÃºmero de linhas de cÃ³digo.', 'o nome dos mÃ©todos deve ser composto por, no mÃ¡ximo, 8 caracteres.', 'o nome das classes deve ser composto por, no mÃ¡ximo, 20 caracteres.', 'a', 'Programação Orientada a Objetos'),
+(88, 'Acerca da programaÃ§Ã£o Orientada a Objetos, OVERLOADING Ã© a habilidade de poder definir diversas propriedades, mÃ©todos ou procedimentos em uma classe com o mesmo nome, que tambÃ©m pode ser definida como:', 'PirÃ¢mide.', 'Pilha.', 'Morphing.', 'Sobrecarga.', 'd', 'Programação Orientada a Objetos'),
+(89, 'Sobre a POO (ProgramaÃ§Ã£o Orientada a Objetos), assinale a alternativa INCORRETA.', 'Classe Pai, classe Base ou Superclasse Ã© a classe que foi herdada.', 'Classe Filha ou Sub-Classe Ã© a classe que herda da classe Pai.', 'Instancias - sÃ£o caracterÃ­sticas de um objeto.', 'MÃ©todos definem as habilidades dos objetos.', 'c', 'Programação Orientada a Objetos'),
+(90, 'Em um programa em C# sÃ£o adicionados vÃ¡rios valores do tipo int em uma implementaÃ§Ã£o da classe Stack, vamos supor que vocÃª queira remover todos objetos da fila, qual mÃ©todo vocÃª deve usar ?', 'Stack.Pop', 'Stack.Push', 'Stack.Clear', 'Stack.Peek', 'c', 'Programação Orientada a Objetos'),
+(91, 'Em programaÃ§Ã£o orientada a objetos, a possibilidade de haver funÃ§Ãµes de mesmo nome, com funcionalidades similares em classes sem nenhuma relaÃ§Ã£o entre elas, denomina-se:', 'encapsulamento.', 'objeto.', 'classe.', 'polimorfismo.', 'd', 'Programação Orientada a Objetos'),
+(92, 'Sobre orientaÃ§Ã£o a objetos, Ã© correto armar:', 'Uma classe Ã© o projeto do objeto. Ela informa Ã  mÃ¡quina virtual como criar um objeto de um tipo especÃ­fico. Cada objeto cria', 'Um relacionamento de heranÃ§a significa que a superclasse herdarÃ¡ as variÃ¡veis de instÃ¢ncia e mÃ©todos da subclasse.', 'Uma interface Ã© uma classe 100% abstrata, ou seja, uma classe que nÃ£o pode ser instanciada.', 'Os objetos tÃªm seu estado definido pelos mÃ©todos e seu comportamento definido nas variÃ¡veis de instÃ¢ncia.', 'c', 'Programação Orientada a Objetos'),
+(93, 'Dentro do paradigma de programaÃ§Ã£o orientada a objetos (POO), hÃ¡ um mecanismo utilizado para impedir o acesso direto ao estado de um objeto, restando apenas os mÃ©todos externos que podem alterar esses estados. Assinale a alternativa que apresenta o nome deste mecanismo.', 'Mensagem', 'HeranÃ§a', 'Polimorfismo', 'Encapsulamento', 'd', 'Programação Orientada a Objetos'),
+(94, 'Na taxonomia utilizada para as formas de polimorfismo sÃ£o, respectivamente, dois tipos categorizados como universal e dois como Ad Hoc:', 'ParamÃ©trico e InclusÃ£o; Sobrecarga e CoerÃ§Ã£o.', 'ParamÃ©trico e CoerÃ§Ã£o; Sobrecarga e InclusÃ£o.', 'ParamÃ©trico e Sobrecarga; InclusÃ£o e CoerÃ§Ã£o.', 'Sobrecarga e InclusÃ£o; ParamÃ©trico e CoerÃ§Ã£o.', 'a', 'Programação Orientada a Objetos'),
+(95, 'Na taxonomia utilizada para as formas de polimorfismo sÃ£o, respectivamente, dois tipos categorizados como universal e dois como Ad Hoc:', 'ParamÃ©trico e InclusÃ£o; Sobrecarga e CoerÃ§Ã£o.', 'ParamÃ©trico e CoerÃ§Ã£o; Sobrecarga e InclusÃ£o.', 'ParamÃ©trico e Sobrecarga; InclusÃ£o e CoerÃ§Ã£o.', 'Sobrecarga e InclusÃ£o; ParamÃ©trico e CoerÃ§Ã£o.', 'a', 'Programação Orientada a Objetos'),
+(96, 'MÃ©todo especial destinado ao preparo de novos objetos durante sua instanciaÃ§Ã£o. Pode ser acionado por meio do operador new, recebendo parÃ¢metros como mÃ©todos comuns, o que permite caracterizar os objetos jÃ¡ na instanciaÃ§Ã£o. Trata-se de', 'operaÃ§Ã£o polimÃ³rfica.', 'construtor.', 'atributo.', 'heranÃ§a polimÃ³rfica.', 'b', 'Programação Orientada a Objetos'),
+(97, 'Sobre a programaÃ§Ã£o orientada a objetos, Ã© incorreto armar que:', 'uma interface Ã© uma classe abstrata que nÃ£o pode ser instanciada.', 'as interfaces permitem explorar o polimorfismo.', 'uma classe abstrata significa que ela deve ser estendida; um mÃ©todo abstrato significa que ele deve ser sobreposto.', 'um mÃ©todo abstrato pode estar presente em uma classe nÃ£o abstrata, desde que nÃ£o tenha corpo.', 'd', 'Programação Orientada a Objetos'),
+(98, 'Dentro do paradigma de programaÃ§Ã£o orientada a objetos (POO), hÃ¡ um mecanismo pelo qual uma classe pode estender outra classe, aproveitando seus mÃ©todos e atributos. Assinale a alternativa que apresenta o nome desse mecanismo.', 'heranÃ§a.', 'mensagem.', 'encapsulamento.', 'polimorfismo.', 'a', 'Programação Orientada a Objetos'),
+(99, 'Classes que encapsulam os tipos primitivos como objetos, agregando funcionalidades de conversÃ£o, sÃ£o as chamadas, especificamente, classes:', 'mothers.', 'abstratas.', 'primitivas.', 'wrappers.', 'd', 'Programação Orientada a Objetos'),
+(100, 'A descriÃ§Ã£o de um conjunto de entidades (reais ou abstratas) de um mesmo tipo e com as mesmas caracterÃ­sticas e comportamentos. Trata-se da definiÃ§Ã£o de:', 'String.', 'MÃ©todo.', 'Conjunto.', 'Classe.', 'd', 'Programação Orientada a Objetos'),
+(101, 'Na programaÃ§Ã£o orientada a objetos existem quatro tipos de polimorfismos possÃ­veis de serem aplicados na estrutura de uma classe, a saber:', 'HierÃ¡rquico, Sobrecarga, Procedural e CoerÃ§Ã£o.', 'Incursivo, Exclusivo, Herdado e Implementado.', 'InclusÃ£o, ParamÃ©trico, Sobrecarga e CoerÃ§Ã£o.', 'Procedural, HierÃ¡rquico, ParamÃ©trico e Implementado.', 'c', 'Programação Orientada a Objetos'),
+(102, '&quot;Ã‰ o mecanismo pelo qual uma classe pode estender outra classe, aproveitando seus comportamentos e variÃ¡veis possÃ­veis.&quot; Na programaÃ§Ã£o orientada a objetos esta armaÃ§Ã£o refere-se aos conceitos essenciais de:', 'heranÃ§a, mÃ©todos e atributos.', 'subclasse, instÃ¢ncia e associaÃ§Ã£o.', 'subclasse, encapsulamento e abstraÃ§Ã£o.', 'heranÃ§a, abstraÃ§Ã£o e associaÃ§Ã£o.', 'a', 'Programação Orientada a Objetos'),
+(103, 'A especificaÃ§Ã£o de uma comunicaÃ§Ã£o entre objetos, que contÃ©m informaÃ§Ãµes relacionadas ao que se espera resultar dessa atividade, Ã©:', 'uma restriÃ§Ã£o.', 'uma mensagem.', 'uma operaÃ§Ã£o.', 'um processo oculto.', 'b', 'Programação Orientada a Objetos');
 
 -- --------------------------------------------------------
 
-
--- Estrutura para tabela `usuario`
+--
+-- Estrutura da tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -141,13 +180,32 @@ CREATE TABLE `usuario` (
   `password` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
----- Despejando dados para a tabela `usuario`
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `username`, `password`) VALUES
+(0, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabelas apagadas
+-- Indexes for table `disciplinas`
 --
-
-ALTER TABLE `questao`
+ALTER TABLE `disciplinas`
   ADD PRIMARY KEY (`id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `disciplinas`
+--
+ALTER TABLE `disciplinas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -38,23 +38,34 @@
 
     <div class="row p-5">
     	<div class="col-md-4 text-center my-auto">
-    		<div class="row mb-3">
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    		</div>
-    		<div class="row mb-3">
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    			<div class="col-md-3"><img class="disciplina-img img-responsive" src="<?= base_url()?>/assets/img/informatica.jpg"></div>
-    		</div>
+
+
+
+
+			<?=form_open('questionario-index/10')?>
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <button class="btn btn-outline-secondary disabled " type="button">Escolha a disciplina</button>
+			  </div>
+			  <select name="disciplina" class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon" required>
+			    <?php foreach ($disciplinas as $disciplina): ?>
+    				<option  value=<?="'".$disciplina['disciplina']."'"?>><?=$disciplina['disciplina']?></option>
+    			<?php endforeach; ?>
+			  </select>
+			</div>
+			
+            <div class="form-group">
+              
+             </div>
+          	
+
     		<div class="row">
     			<div class="col-md-12 text-center">
-		    <?=anchor('questionario-index/5','Iniciar Questionário ', array("class" => "btn btn-primary btn-block btn-x1 align-middle"))?>
+                <button type="submit" class="btn btn-primary btn-block btn-x1 align-middle">Iniciar Questionário</button>
     			</div>
     		</div>
+    		<?=form_close()?>
+
     	</div>
     	<div class="col-md-4 text-center">
     		<img src="<?= base_url()?>/assets/img/questionboy.png" width="80%">
@@ -76,7 +87,8 @@
 						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
 						    <label class="form-check-label" for="exampleCheck1">Check me out</label>
 						  </div>
-						  <button type="submit" class="btn btn-primary">Submit</button>
+						  <button type="submit" class="btn btn-primary">Entrar</button>
+						  <a class="btn btn-primary" href="admin-index">Área do ADM</a>
 						<?=form_close()?>
 	        
     	</div>

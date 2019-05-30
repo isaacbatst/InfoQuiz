@@ -75,6 +75,8 @@ $route['usuario-excluir/(:num)'] = "UsuarioController/excluir/$1";
 $route['index'] = "IndexController";
 $route['index-index'] = "IndexController/index";
 
+$route['admin-index'] = "AdminController/index";
+
 
 //Rota Login
 $route['login-autenticar'] = "LoginController/autenticar";
