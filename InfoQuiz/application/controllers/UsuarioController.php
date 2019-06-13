@@ -30,5 +30,4 @@
             $this->Usuario->inserir($usuario);
             redirect('usuario-index');
         }
-
   	}

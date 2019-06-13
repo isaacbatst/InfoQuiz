@@ -12,6 +12,7 @@
             }
 
             redirect('admin-index');
+
         }
 
         public function logout(){

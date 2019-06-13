@@ -37,6 +37,7 @@
     <div class="container-fluid bg-azul ">
 
     <div class="row p-5">
+
     	<div class="col-md-4 text-center text-color-white">
 
     	<div class="row ">
@@ -78,11 +79,13 @@
     	</div>
     	<div class="col-md-4 ">
 	      				<h5>Faça seu cadastro</h5>
+
 	          <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
 	          <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
 						<?=form_open('login-autenticar')?>
 						  <div class="form-group">
 						    <label for="exampleInputEmail1">Email</label>
+
 						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
 						  </div>
 						  <div class="form-group">
@@ -99,6 +102,7 @@
 							</div>
 						<br>
 						  <button type="submit" class="btn btn-primary">Criar Conta</button>
+
 						<?=form_close()?>
 	        
     	</div>

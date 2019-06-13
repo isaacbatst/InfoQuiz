@@ -4,6 +4,7 @@
 
     <div class="container">
       <div class="row">
+
         <div class="col-md-3 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Localização</h4>
           <p class="lead mb-0 text-justify footer-endereco">    Rua Brusque, 2926, 
@@ -11,6 +12,7 @@
               Potengi | Natal-RN | CEP: 59112-490 </p>
         </div>
         <div class="col-md-3 mb-5 mb-lg-0">
+
           <h4 class="text-uppercase mb-4">Redes Sociais</h4>
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
@@ -31,11 +33,13 @@
            
           </ul>
         </div>
+
         <div class="col-md-6">
           <h4 class="text-uppercase mb-4">Sobre o SuperQuiz</h4>
           <p  class="text-justify"  >
 O Superquiz é uma plataforma educacional gratuita de avaliação e treinamento nas diversas áreas de conhecimento em informática voltado para a resolução de questões e a fixação do conteúdo estudado. Resolver questões é uma das formas mais eficientes para testar seus conhecimentos e se preparar para concursos públicos.
  
+
           </p>
         </div>
       </div>

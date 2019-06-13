@@ -15,6 +15,7 @@
  <section class="bg-azul text-white mb-0" id="adm">
     <div class="container">
       <h2 class="text-center text-uppercase text-white">ADM's Area</h2>
+
 			<div class="text-center mt-4">
 					<td><?=anchor('questao','Questões', array("class" => "btn btn-xl btn-outline-light"))?></td>
         
